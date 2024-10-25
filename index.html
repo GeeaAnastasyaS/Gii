@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fathoni Prayogi</title>
+    <style>
+        /* Basic styling */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: url('https://images.unsplash.com/photo-1542436433-0cf131b3040d') center/cover; /* Background texture */
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            color: #333;
+            flex-direction: column; /* Menyusun elemen dalam kolom */
+        }
+
+        /* Scrapbook container */
+        .scrapbook {
+            background: #fff;
+            width: 90%;
+            max-width: 600px;
+            padding: 30px;
+            box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.2);
+            border-radius: 8px;
+            text-align: center;
+            overflow: hidden;
+            position: relative;
+            border: 3px solid #007bff; /* Ganti warna coklat jadi biru */
+            background-image: url('https://www.transparenttextures.com/patterns/light-paper-fibers.png'); /* Page texture */
+        }
+
+        /* Title styling */
+        .scrapbook h1 {
+            font-size: 2em;
+            color: #0056b3; /* Ganti warna coklat jadi biru */
+            margin-bottom: 10px;
+            position: relative;
+            animation: fadeIn 1.2s ease-in-out;
+        }
+
+        /* Decorative lines */
+        .scrapbook h1:before, .scrapbook h1:after {
+            content: "";
+            width: 60px;
+            height: 3px;
+            background: #007bff; /* Ganti warna coklat jadi biru */
+            position: absolute;
+            top: 50%;
+            margin-top: -1.5px;
+            animation: fadeIn 1.2s ease-in-out;
+        }
+        .scrapbook h1:before {
+            left: -70px;
+        }
+        .scrapbook h1:after {
+            right: -70px;
+        }
+
+        /* Carousel styling */
+        .carousel {
+            position: relative;
+            width: 100%;
+            max-height: 400px; /* Tinggi untuk foto portrait */
+            overflow: hidden;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+        .carousel img {
+            width: 100%;
+            height: auto;
+            display: none;
+            border-radius: 8px;
+        }
+        .carousel img.active {
+            display: block;
+        }
+
+        /* Text styling */
+        .scrapbook p {
+            font-size: 1.1em;
+            line-height: 1.8;
+            margin: 15px 0;
+            color: #5d4037;
+            animation: fadeInUp 1.5s ease-in-out;
+            font-style: italic;
+            padding: 0 20px;
+        }
+
+        /* Sticky note */
+        .sticky-note {
+            background: #fef68a;
+            width: 80px;
+            height: 80px;
+            position: relative;
+            padding: 10px;
+            font-size: 0.8em;
+            box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2);
+            transform: rotate(-5deg);
+            font-weight: bold;
+            color: #333;
+            margin-top: 20px; /* Memberi jarak atas */
+            display: inline-block;
+            margin: 20px auto 0; /* Center and space below */
+        }
+
+        /* Photo Gallery styling */
+        .photo-gallery {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); /* 3 kolom */
+            gap: 10px;
+            margin-top: 20px;
+        }
+        .photo-gallery img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Back button styling */
+        .scrapbook a {
+            display: inline-block;
+            padding: 10px 20px;
+            margin-top: 20px;
+            background: #007bff; /* Ganti warna coklat jadi biru */
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            animation: bounce 2s infinite ease;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+            40% { transform: translateY(-5px); }
+            60% { transform: translateY(-3px); }
+        }
+    </style>
+</head>
+<body>
+
+<div class="scrapbook">
+    <h1>Fathoni Prayogi</h1>
+    
+    <!-- Carousel -->
+    <div class="carousel">
+        <img src="1.jpeg" class="active" alt="Gambar Potret 1">
+        <img src="2.JPG" alt="Gambar Potret 2">
+        <img src="3.JPG" alt="Gambar Potret 3">
+        <img src="4.JPG" alt="Gambar Potret 4">
+    </div>
+    
+    <p>Untuk seseorang yang sedang merantau ke Jakarta, dan akan kembali ke tempat asalnya, terima kasih atas waktu yang sudah dilewati, baik dalam suka maupun duka. Semoga semua itu bisa menjadi kenangan indah atau pelajaran berharga.</p>
+    <p>Makasih juga atas kebaikannya selama ini. Maaf, aku belum bisa balas kebaikanmu sepenuhnya. Kalau kamu sudah sampai di Palembang, tetap semangat untuk raih impian kamu ya! ❤️</p>
+
+    <!-- Sticky note -->
+    <div class="sticky-note">
+        Semangat Berjuang!
+    </div>
+
+    <!-- Photo Gallery -->
+    <div class="photo-gallery">
+        <img src="1.jpeg" alt="Foto 1">
+        <img src="2.JPG" alt="Foto 2">
+        <img src="3.JPG" alt="Foto 3">
+        <img src="4.JPG" alt="Foto 4">
+        <img src="5.jpeg" alt="Foto 5">
+        <img src="6.JPG" alt="Foto 6">
+    </div>
+
+    <a href="#">Papay 👋</a>
+</div>
+
+<script>
+    // Carousel functionality
+    let currentIndex = 0;
+    const images = document.querySelectorAll('.carousel img');
+    const totalImages = images.length;
+
+    function showImage(index) {
+        images.forEach((img, i) => {
+            img.classList.remove('active');
+            if (i === index) {
+                img.classList.add('active');
+            }
+        });
+    }
+
+    function nextImage() {
+        currentIndex = (currentIndex + 1) % totalImages;
+        showImage(currentIndex);
+    }
+
+    // Change image every 3 seconds
+    setInterval(nextImage, 3000);
+</script>
+
+</body>
+</html>
